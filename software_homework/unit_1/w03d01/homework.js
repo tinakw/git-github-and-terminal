@@ -19,3 +19,4 @@ class Hamster {
 let bob = new Hamster('Bob','Sunny',0);
 // console.log(bob.eatFood());
 console.log(bob);
+console.log(bob.eatFood());

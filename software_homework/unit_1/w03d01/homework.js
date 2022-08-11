@@ -92,80 +92,69 @@ class Hamster {
 // "created timmys story" Easy Mode Keep Going Save and Run Code
 /////...................................................
 
-class Person {
-    constructor (name, age, height, weight, mood, bankAccount){
-        this.name = name;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
-        this.mood = mood;
-        this.hamsters = [];
-        this.bankAccount = bankAccount;  
-        }
+// class Person {
+//     constructor (name, age, height, weight, mood, bankAccount){
+//         this.name = name;
+//         this.age = age;
+//         this.height = height;
+//         this.weight = weight;
+//         this.mood = mood;
+//         this.hamsters = [];
+//         this.bankAccount = bankAccount;  
+//         }
 
-        getName() {
-            return this.name;
-        }
+//         getName() {
+//             return this.name;
+//         }
 
-        getAge(){
-            return `Timmy is ` + this.age + ` years old!`;
-        }
+//         getAge(){
+//             return `Timmy is ` + this.age + ` years old!`;
+//         }
 
-        getWeight(){
-            return this.weight;
-        }
+//         getWeight(){
+//             return this.weight;
+//         }
 
-        greet(){
-            console.log('Hi ' + this.name + ' !');    
-        }
+//         greet(){
+//             console.log('Hi ' + this.name + ' !');    
+//         }
 
-        eat(num){
-            return this.name + ` is ` + this.age + ` and his mood is ` + this.mood + ` and he currently weighs ` + this.weight + `. He eats ` + num + ` times! Eating increases mood to ` + (this.mood+=num) + ` and weight to ` + (this.weight+=(num*5)) + `!`;
-        }
+//         eat(num){
+//             return this.name + ` is ` + this.age + ` and his mood is ` + this.mood + ` and he currently weighs ` + this.weight + `. He eats ` + num + ` times! Eating increases mood to ` + (this.mood+=num) + ` and weight to ` + (this.weight+=(num*5)) + `!`;
+//         }
 
-        exercise(num){
-            return this.name + ` exercises ` + num + ` times! Exercise reduces weight. ` + this.name + ` now weighs `+ (this.weight-=(num*3)) + ` pounds!`;
-        }
+//         exercise(num){
+//             return this.name + ` exercises ` + num + ` times! Exercise reduces weight. ` + this.name + ` now weighs `+ (this.weight-=(num*3)) + ` pounds!`;
+//         }
 
-        ageUp(num){
-            this.weight += num*5;
-            this.mood -= num;
-            return this.name + ` has aged by ` + num + ` years to ` + (this.age+=num) + `! His bank account increases by $10 each Birthday. He now has $` + (this.bankAccount+=(num*10)) + `!`;  
-        }
+//         ageUp(num){
+//             this.weight += num*5;
+//             this.mood -= num;
+//             return this.name + ` has aged by ` + num + ` years to ` + (this.age+=num) + `! His bank account increases by $10 each Birthday. He now has $` + (this.bankAccount+=(num*10)) + `!`;  
+//         }
 
-        buyHamster(hamster){
-            this.hamsters.push(hamster);
-            return this.name + ` buys ` + hamster.nameofHamster + ` for $` + hamster.getPrice() + ` and his new balance is $` + (this.bankAccount-=hamster.getPrice()) + ` and his mood is now ` + (this.mood+=10) + `!`;
-        }
-};
+//         buyHamster(hamster){
+//             this.hamsters.push(hamster);
+//             return this.name + ` buys ` + hamster.nameofHamster + ` for $` + hamster.getPrice() + ` and his new balance is $` + (this.bankAccount-=hamster.getPrice()) + ` and his mood is now ` + (this.mood+=10) + `!`;
+//         }
+// };
 
-let Timmy = new Person('Timmy',5,4.5,60,1,10);
-//name, age, height, weight, mood, bankAccount
-console.log(Timmy);
-console.log(Timmy.getAge());
-console.log(Timmy.eat(5));
-console.log(Timmy.exercise(5));
-console.log(Timmy.ageUp(4));
-let Gus = new Hamster();
-Gus.nameofHamster='Gus';
-console.log(Gus);
-Gus.nameOfOwner='Timmy';
-console.log(Timmy.buyHamster(Gus));
-console.log(Gus);
-console.log(Timmy.ageUp(6));
-console.log(Timmy.eat(2));
-console.log(Timmy.exercise(2));
-
-
-
-
-
-
-
-
-
-
-
+// let Timmy = new Person('Timmy',5,4.5,60,1,10);
+// //name, age, height, weight, mood, bankAccount
+// console.log(Timmy);
+// console.log(Timmy.getAge());
+// console.log(Timmy.eat(5));
+// console.log(Timmy.exercise(5));
+// console.log(Timmy.ageUp(4));
+// let Gus = new Hamster();
+// Gus.nameofHamster='Gus';
+// console.log(Gus);
+// Gus.nameOfOwner='Timmy';
+// console.log(Timmy.buyHamster(Gus));
+// console.log(Gus);
+// console.log(Timmy.ageUp(6));
+// console.log(Timmy.eat(2));
+// console.log(Timmy.exercise(2));
 
 
 ////////////////////////////////////////////////////////////
@@ -186,3 +175,27 @@ console.log(Timmy.exercise(2));
 // "Dinner is served" Easy Mode Keep Going Save and Run Your Code
 /////......................................................................
 
+class Dinner {
+    constructor (appetizer, entree, dessert){
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert
+    }
+};
+
+class Chef {
+    constructor (grub) {
+        this.grub = grub;
+        this.dinner =[];
+    }
+    makeDinner(appetizer, entree, dessert){
+        const newDinner = new Dinner(appetizer, entree, dessert);
+        this.dinner.push(newDinner)
+    }
+};
+
+const grub1 = new Chef('Chefs Menu');
+grub1.makeDinner('Shrimp Cocktail', 'Lamb Chops', 'Creme Brulee')
+grub1.makeDinner('Fried Calamari', 'Steak Salad', 'Apple Pie')
+grub1.makeDinner('Lobster Bisque', 'Chicken Paillard', 'Chocolate Bread Pudding')
+console.log(grub1)

@@ -38,8 +38,9 @@ class Hamster {
         return this.price;
     }
 };
+//////////// Hamster Test Output //////////////
 //  let Gus = new Hamster('Timmy','Gus',15);
-// console.log(Gus.eatFood());
+//  console.log(Gus.eatFood());
 //  console.log(Gus);
 //  console.log(Gus.eatFood());
 
@@ -49,7 +50,6 @@ class Hamster {
 
 // Person
 // attributes:
-
 // name - set name from parameter in constructor method
 // age - initially 0
 // height - initially 0
@@ -57,8 +57,8 @@ class Hamster {
 // mood - integer starting at 0 initially
 // hamsters - empty array initially
 // bankAccount - initially set to 0
-// methods:
 
+// methods:
 // getName() - returns name
 // getAge() - returns age
 // getWeight() - returns weight
